@@ -1,7 +1,0 @@
-[requires]
-     fep_sdk_system/2.6.1@aev25/stable
-     CMake/3.13.1@aev25/stable
-    
-[generators]
-    cmake
-    virtualrunenv

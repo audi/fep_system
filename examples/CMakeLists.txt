@@ -14,18 +14,6 @@
 set(EXAMPLES_INTEGRATED ON)
 add_subdirectory(src)
 
-install(FILES CMakeLists.txt.install RENAME CMakeLists.txt DESTINATION examples)
-install(FILES conanfile.txt DESTINATION examples)
-
-if(WIN32)
-    install(FILES build_examples.cmd.install RENAME build_examples.cmd DESTINATION examples)
-else()
-    install(FILES build_examples.sh.install
-            RENAME build_examples.sh
-            PERMISSIONS OWNER_WRITE OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
-            DESTINATION examples)
-endif()
-
 install(FILES src/demo_fep_system_control/CMakeLists.txt 
               src/demo_fep_system_control/main.cpp
               src/demo_fep_system_control/README.txt

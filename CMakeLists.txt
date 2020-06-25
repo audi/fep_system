@@ -47,7 +47,7 @@ else()
 endif()
 
 # check for conan
-#f(CONAN_COMPILER)
+if(CONAN_COMPILER)
     message(STATUS "Including Conan build info")
     if ( EXISTS ${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
         include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
