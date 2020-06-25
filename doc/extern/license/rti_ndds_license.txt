@@ -1,0 +1,400 @@
+You must agree to the following terms before installing this the FEP SDK:
+* Unless you have established another contract with RTI and pay the appropriate fees, ALL SDK USE IS "AS IS", WITH NO WARRANTY OF ANY KIND nor support from RTI.
+* Any part provided by RTI and delivered within the FEP SDK must only be used in projects doing Development using the FEP SDK.
+* You must not directly use any Software functionality provided by RTI within the FEP SDK.
+* You must not use RTI DDS delivered within the FEP SDK DDS unless RTI has granted you the right to.
+
+In addition, read the following agreement:
+
+  REAL-TIME INNOVATIONS, INC.
+  SOFTWARE LICENSE AGREEMENT
+
+PLEASE READ THIS AGREEMENT CAREFULLY BEFORE DOWNLOADING, INSTALLING, OR
+USING THIS PRODUCT. THIS AGREEMENT GRANTS THE ORIGINAL LICENSEE OF THE
+SOFTWARE ("YOU") THE RIGHT TO USE THIS PRODUCT FOR SPECIFIED PURPOSES.
+THIS AGREEMENT STATES THE TERMS AND CONDITIONS UPON WHICH REAL-TIME
+INNOVATIONS, INC. ("RTI") OFFERS OR ACCEPTS YOUR OFFER TO LICENSE THIS
+PRODUCT AND THE RELATED DOCUMENTATION (COLLECTIVELY, THE "SOFTWARE") TO
+YOU. UNLESS YOU HAVE A DIFFERENT LICENSE FROM RTI, ALL USE OF THE
+SOFTWARE IS SUBJECT TO THE TERMS OF THIS AGREEMENT. BY DOWNLOADING,
+INSTALLING, AND/OR USING THIS PRODUCT, YOU ARE AGREEING TO BE BOUND BY
+THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS OF THIS
+AGREEMENT, DO NOT DOWNLOAD, INSTALL, OR USE THIS PRODUCT.
+
+The Software is licensed, not sold, to You for use only under the terms
+of this Agreement, and RTI reserves all rights not expressly granted to
+You. RTI retains ownership of all copies of the Software.
+
+ 1. Definitions
+ 
+      * A License Acknowledgment Certificate ("LAC") is a separate
+        document issued by RTI to You specifying the details of the
+        licenses that You are granted. You may have multiple LACs. If
+        You do not have an LAC, then Your use is as specified under
+        "Evaluation License" below.
+        
+      * A "Project" is a concerted undertaking by an identified
+        development team to design or produce a Target Application or
+        connected set of Target Applications that has a specified scope
+        of functionality, as specified in the LAC.
+        
+      * A "Project Type" is a collection of restrictions on and/or
+        licenses granted to the Project as specified in the LAC.
+        
+      * A "Site" is a physical location or set of locations, including
+        reasonable remote access, as specified in the LAC.
+      
+      * A "Target Application" is a user-developed software program that
+        requires physical incorporation or linking of portions of the
+        Software to execute.
+      
+      * A "User" is a person on the Project team who has used the
+        Software for any purpose in the preceding six (6) months,
+        including to develop, test, stage, or run a Target Application.
+      
+      * Development use is developing code that links to and uses the
+        Software either directly or through any number of
+        internally-developed "wrapper" Application Programmer Interface
+        (API) layers. Development includes making copies of the library
+        portions of the Software (in subdirectory "/lib") in object code
+        form and linking or physically incorporating the copies into a
+        Target Application. Development includes any use of the
+        Software's programming and analysis tools, XML-based or other
+        configuration, or other components of the Software with a
+        Graphical User Interface (GUI).
+      
+      * A "Developer" is a User who does Development.
+      
+      * A "CPU" is any physical computer processor that has executed a
+        Target Application or the Software in the preceding six (6)
+        months. In a virtual environment, the number of CPUs is the
+        maximum number of simultaneously-loaded images in the preceding
+        six (6) months.
+      
+      * "Internal End Use" is use of the Software in an internal Target
+        Application to produce revenue or benefit.
+      
+      * The "Term" is the active period of this Agreement, as specified
+        in the LAC.
+ 
+ 2. License
+    All licenses are non-transferable and non-exclusive. Use is limited
+    to the designated Site and Project, on the Licensed Host(s) or
+    Platform(s) as defined in the LAC. For each license, You must pay
+    RTI fees in accordance with RTI's then-current, applicable,
+    published price list, or as may be specifically agreed to in writing
+    between You and RTI.
+
+     a. Developer License
+        If You have an LAC that specifies a number of Developer
+        Licenses, then up to that number of Users may use the Software
+        for Development during the Term.
+
+     b. Internal CPU License
+        If You have an LAC that specifies a number of Internal CPU
+        licenses, then up to that number of CPUs may execute the
+        Software internal to your Project at the Site during the Term.
+
+     c. OEM Runtime CPU License
+        If You have an LAC that specifies a number of OEM Runtime CPU
+        licenses, then You may physically incorporate copies of the
+        Software into a Target Application and distribute Target
+        Applications using up to that number of CPUs. Such copies may be
+        made only at the Site on the Project. These terms apply to all
+        such Target Applications:
+
+         i. Unless your LAC states that you may use an unlimited number
+            of OEM Runtime Licenses, You agree to keep records of the
+            numbers Target Applications and CPUs you distribute. RTI
+            shall have the right, upon reasonable notice, to examine
+            Your records regarding such practices.
+            
+        ii. Unless specified in the LAC, Target Applications may not
+            contain software development functionality, RTI source code,
+            or components of the Software with a Graphical User
+            Interface (GUI).
+            
+       iii. You must distribute Your Target Application to end users
+            with a license that acknowledges RTI's copyright, prevents
+            further copying of the Software (except for backup
+            purposes), and expressly disclaims all warranties by RTI.
+            
+        iv. RTI offers no warranty to Your end users. THE SOFTWARE, WHEN
+            INCORPORATED INTO A TARGET APPLICATION, IS PROVIDED "AS IS"
+            AND WITHOUT WARRANTY OF ANY KIND. RTI DISCLAIMS ALL
+            WARRANTIES, EITHER EXPRESSED OR IMPLIED, INCLUDING THE
+            WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+            PURPOSE AND NONINFRINGEMENT OF THIRD-PARTY RIGHTS.
+            
+         v. Any valid end-user licenses to Target Applications
+            incorporating Software granted by You under this Agreement
+            shall survive the termination of this Agreement.
+            
+     d. Source License
+        If you have an LAC that specifies a Source License, then You may
+        use and modify the source code, and build object versions of the
+        original or modified source code.
+
+        If You modify the source code, then You assign and convey all of
+        Your copyright to such modifications and derivative works to
+        RTI. If for any reason You cannot assign Your copyright, then
+        You grant RTI a perpetual, worldwide, non-exclusive, assignable,
+        paid-up license to use, copy, modify, distribute, create
+        derivative works, sublicense, and otherwise fully utilize the
+        modifications without acknowledgment of ownership. You also
+        assign or license to RTI any other intellectual property rights
+        required to fully use the modifications for any purpose. You
+        agree to provide such modifications to RTI upon request. RTI may
+        incorporate Your modifications into any future version of the
+        Software or into other products at its sole option without fees
+        or attribution.
+
+        If You modify the Software, then all warranties are void. Unless
+        agreed otherwise, RTI has no obligation to support the modified
+        Software.
+
+        A Source License does not grant other rights; a Developer
+        License is required for Development, and an Internal CPU or an
+        OEM Runtime CPU License is required to create or distribute
+        Target Applications.
+
+     e. Evaluation License
+        If You have an Evaluation License, or have not received an LAC
+        or one of the above licenses from RTI, or are using an
+        evaluation or pre-production ("Beta" or "Early Access Release")
+        version of the Software, then RTI grants to You a temporary
+        license to use the Software for the sole purpose of testing the
+        suitability, performance and usefulness of the software for Your
+        business needs. You may not use the Software for Development
+        (beyond prototypes), or commercial purposes.
+
+        Unless extended by RTI, the Beta or Evaluation period ("Term")
+        concludes thirty (30) days from the date of Your first download
+        or installation of the Software.
+
+    For all types of licenses, if You elect to use the Software after
+    the Term, You will need to acquire an appropriate license. For all
+    licenses with a specified numerical limit, You agree to provide RTI
+    with good-faith estimates of actual license usage annually. This
+    Agreement and the licenses it grants terminate at the end of the
+    Term. You may make a reasonable number of copies of the Software
+    strictly for backup or archival purposes.
+
+ 3. Additional Restrictions.
+ 
+     a. Except as provided herein, You may not market, distribute or
+        transfer copies of the Software to others. You may not rent,
+        lease, loan or otherwise provide the Software to any third parties.
+     
+     b. You may not use the Software if You are a direct competitor or
+        acting on behalf of a direct competitor of RTI, except with
+        RTI's prior written consent.  You may not use the Software for
+        competitive purposes such as evaluating performance or
+        functionality without RTI's prior written consent.
+ 
+ 4. Limited Warranty.
+ 
+     a. Research and Nonprofit Licenses and Research and Nonprofit
+        Project Types (as defined in the LAC), Evaluation Licenses, and
+        OEM Runtime CPU Licenses are provided "as is" with no warranty
+        whatsoever. The warranties in this section apply only to paid
+        licenses for fully-released versions of the Software at the Site.
+     
+     b. RTI warrants that the Software will perform substantially in
+        accordance with the accompanying written materials for an
+        installation period of ninety (90) days from the date that the
+        Software is first downloaded by You. RTI does not warrant that
+        the Software will meet Your requirements or operate free from
+        error. This limited warranty gives You specific legal rights.
+        You may have others, which vary from state to state. After the
+        installation warranty period, you may elect to purchase support
+        or maintenance subject to RTI's policies then in effect see:
+        http://www.rti.com/downloads/support-policy.html and
+        http://www.rti.com/downloads/maintenance-policy.html.
+     
+     c. RTI warrants that, other than documented license management
+        technology, the Software as well as any medium used to provide
+        the Software will be free of viruses, worms, Trojan horses, time
+        bombs, back or trap doors, or other debilitating or disabling
+        devices or malicious code.
+     
+     d. RTI warrants that the Software is subject to no restrictions or
+        licenses that would require You to redistribute any of Your
+        source code.
+     
+     e. RTI warrants that it has the right to grant You the licenses herein.
+     
+     f. RTI's entire liability and Your sole and exclusive remedy for
+        any breach of the foregoing warranty shall be, at RTI's option,
+        to either: (i) return the price paid for the Software; or (ii)
+        repair or replace the Software. Any replacement Software will be
+        warranted for the remainder of the original warranty period or
+        thirty (30) days, whichever is longer.
+     
+     g. RTI DISCLAIMS ALL OTHER WARRANTIES, EITHER EXPRESS OR IMPLIED,
+        INCLUDING THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+        PARTICULAR PURPOSE. NO ORAL OR WRITTEN INFORMATION OR ADVICE
+        GIVEN BY RTI, ITS DEALERS, DISTRIBUTORS, AGENTS OR EMPLOYEES
+        SHALL CREATE A WARRANTY OR IN ANY WAY INCREASE THE SCOPE OF THIS
+        WARRANTY AND YOU MAY NOT RELY ON ANY SUCH INFORMATION OR ADVICE.
+
+ 5. Infringement Indemnity. RTI will defend any suit brought against You
+    and will pay all damages finally awarded in such suit insofar as
+    such suit is based on a claim that the Software as provided to You
+    infringes a third-party, provided that RTI is notified promptly of
+    such claim and at its expense is given full and complete authority
+    (including settlement authority), information and assistance by You
+    for such defense. In the event that the Software is held in any such
+    suit to infringe such a right and its use is enjoined, or if in the
+    opinion of RTI the Software is likely to become the subject of such
+    a claim, RTI at its own election and expense will either: (i)
+    procure for You the right to continue using the Software; or (ii)
+    modify or replace the Software so that it becomes non-infringing
+    while giving equivalent performance. In the event that (i) or (ii)
+    above are not, in RTI's sole determination, reasonably practicable,
+    then RTI may terminate this Agreement and refund an equitable
+    portion of money paid by You in connection with the licenses granted
+    hereunder.
+    
+ 6. Limited Liability.
+ 
+     a. RTI SHALL NOT BE LIABLE FOR ANY SPECIAL, INCIDENTAL OR
+        CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, DAMAGES
+        FOR LOSS OF BUSINESS, LOSS OF PROFITS, COSTS OF COVER, OR THE
+        LIKE) ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE
+        (WHETHER ARISING IN CONTRACT, TORT, NEGLIGENCE, OR OTHERWISE)
+        EVEN IF RTI OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF THE
+        POSSIBILITY OF SUCH DAMAGES.
+     
+     b. IN PARTICULAR, YOU RECOGNIZE THAT THE SOFTWARE MAY BE PART OF A
+        SYSTEM USED TO CONTROL EXPENSIVE OR DANGEROUS EQUIPMENT.  RTI
+        SHALL NOT BE LIABLE FOR ANY DAMAGE OR INJURY RESULTING FROM THE
+        OPERATION OF SUCH EQUIPMENT.  You agree to indemnify, defend and
+        hold RTI harmless from any claim, lawsuit, legal proceeding,
+        settlement or judgment (including without limitation RTI's
+        reasonable United States and local attorneys' and expert
+        witnesses' fees and costs) arising out of or in connection with
+        the copying, marketing, performance or other distribution of
+        Your Target Applications.
+     
+     c. THE LIABILITY OF RTI FOR ANY CLAIMS ARISING OUT OF THIS
+        AGREEMENT OR USE OF THE SOFTWARE, REGARDLESS OF THE FORM OF
+        ACTION, SHALL NOT EXCEED THE GREATER OF THE AGGREGATE LICENSE
+        FEES YOU PAID FOR THE SOFTWARE OR $10,000.
+     
+     d. THE LIMITED WARRANTY, LIMITED REMEDIES AND LIMITED LIABILITY
+        SPECIFIED IN THIS AGREEMENT ARE FUNDAMENTAL ELEMENTS OF THE
+        BASIS OF THE BARGAIN BETWEEN RTI AND YOU. RTI WOULD NOT BE ABLE
+        TO PROVIDE THE SOFTWARE WITHOUT SUCH LIMITATIONS.
+ 
+ 7. Open Source
+ 
+     a. Portions of the Software may be derived from works of
+        contributors to open source projects (Contributors).
+        Contributors disclaim all warranties, express or implied as to
+        conditions of title non-infringement, merchantability or fitness
+        to purpose. Contributors disclaim all liability for damages,
+        including direct, indirect, special, or consequential damages.
+        Any such warranties and liability are offered by RTI alone as
+        stated and limited in this Agreement.
+     
+     b. If required by the respective licenses, source code for the
+        modified open source works is available by emailing a request to
+        "license@rti.com".
+
+ 8. Support and Maintenance.
+     
+     a. RTI shall have no obligation under this Agreement for
+        corrections of errors or problems which are due to a breach by
+        You of the terms of this Agreement, or which cannot be remedied
+        due to the operational characteristics of the computer equipment
+        on which the Software is used.
+     
+     b. Except as may be provided above or in a separate RTI Maintenance
+        Agreement between RTI and You, if any, RTI is under no
+        obligation to maintain or support the Software supplied to You
+        and RTI has no obligation to furnish You with any further
+        assistance, documentation or information of any nature.
+     
+     c. You are solely responsible for the support and maintenance of
+        all portions of any Target Applications developed by You.
+        
+ 9. Confidentiality. RTI considers the Software to contain valuable
+    trade secrets of RTI, the unauthorized disclosure of which could
+    cause irreparable harm to RTI. You agree to use reasonable efforts
+    not to disclose the Software to any third parties and not to use the
+    Software other than for the purposes authorized by this Agreement.
+    You also agree that performance, functionality or other competitive
+    evaluation results shall not be disclosed to third parties without
+    RTI's prior written consent. For the purposes of this Article, Your
+    subcontractors under appropriate non-disclosure obligations with
+    respect to the Software shall not be considered third parties. This
+    confidentiality obligation shall continue after any termination of
+    this Agreement.
+    
+10. Termination. If the Term is designated as "Permanent" in the LAC,
+    then this Agreement will continue indefinitely unless terminated due
+    to breach. If the Term is designated "Subscription" in the LAC, then
+    this Agreement will terminate on the Expiration Date specified in
+    the LAC unless terminated due to breach. In the event of a breach of
+    this Agreement by either party, the other party may terminate this
+    Agreement if such breach is not cured within 10 days of written
+    notice. Upon termination, You agree not to use the Software for any
+    purpose whatsoever and (except for reasonable backup archives) to
+    destroy the Software and any copies then in Your possession or
+    control, and (on request) certify in writing or via e-mail to RTI
+    that the Software was destroyed. The remedies specified in this
+    Agreement shall be in addition to any other remedies available to RTI.
+    
+11. Export Control. The Software is subject to United States Export
+    Administration and Regulations. Downloading, installing, or using
+    the Software, or selecting the online "Accept License Agreement"
+    button is a confirmation of Your agreement that You (including all
+    Users and Projects) comply, now and during any use term,  with all
+    domestic and international export laws and regulations that apply to
+    the Software. These laws include restrictions on destinations, end
+    users and end use. If the Software is exported from the United
+    States or re-exported from a foreign destination, You shall ensure
+    that the distribution and export/re-export or import of the Software
+    complies with all laws, regulations, orders, or other restrictions
+    of the U.S. Export Administration Regulations.
+    
+12. Government End Users. If the Software is acquired by or on behalf of
+    a unit or agency of the United States Government, this provision
+    applies. The Software: (a) was developed at private expense, (b) is
+    a trade secret of RTI for all purposes of the Freedom of Information
+    Act, (c) is "Commercial Computer Software" as defined by the Federal
+    Acquisition Regulation (d) in all respects is proprietary data
+    belonging solely to RTI, (e) is unpublished and all rights are
+    reserved under the copyright laws of the United States. If the
+    Software is acquired under a GSA Schedule, the Government has agreed
+    to refrain from changing or removing any insignia or lettering from
+    the Software or the documentation that is provided or from producing
+    copies of manuals or media (except for backup purposes).
+    
+13. General. This Agreement will be governed by the laws of the State of
+    California except with regard to its choice of law rules. This
+    Agreement and the License Acknowledgment Certificate(s) between RTI
+    and You constitute the complete, final and exclusive statement of
+    the agreement between RTI and You, which supersede all proposals,
+    oral or written, and all other communications between the parties
+    relating to the subject matter of this Agreement. No terms of Your
+    purchase order nor any waiver, alteration or modification of the
+    provisions of this Agreement will be valid unless made in writing
+    and signed by a corporate officer of RTI. Any controversy or claim
+    arising out of or relating to this Agreement, or the breach thereof,
+    shall be settled by binding arbitration in Santa Clara County,
+    California under the Commercial Arbitration Rules of the American
+    Arbitration Association by one arbitrator appointed in accordance
+    with said rules.  Judgment on the award rendered by the arbitrator
+    may be entered in any court having jurisdiction thereof.
+    Notwithstanding the foregoing, the parties may apply to any court of
+    competent jurisdiction for injunctive relief without breach of this
+    arbitration provision. If any provision or provisions of this
+    Agreement are determined to be invalid, illegal or unenforceable,
+    the validity, legality and enforceability of the remaining
+    provisions of this Agreement will not in any way be affected or
+    impaired thereby.  RTI may assign this Agreement to an entity
+    acquiring essentially all of the RTI's relevant business. You may
+    not assign, sub-license, or otherwise transfer this Agreement
+    without RTI's prior written consent.

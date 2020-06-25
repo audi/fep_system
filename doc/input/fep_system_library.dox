@@ -1,0 +1,64 @@
+//
+// Copyright @ 2019 Audi AG. All rights reserved.
+// 
+//     This Source Code Form is subject to the terms of the Mozilla
+//     Public License, v. 2.0. If a copy of the MPL was not distributed
+//     with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+// 
+// If it is not possible or desirable to put the notice in a particular file, then
+// You may include the notice in a location (such as a LICENSE file in a
+// relevant directory) where a recipient would be likely to look for such a notice.
+// 
+// You may add additional accurate notices of copyright ownership.
+//
+/**
+\page fep_system_library FEP System Library
+
+FEP System
+---------------------------------------------------------------------------------------------------
+
+
+The FEP System Library implements the standard solution to control, monitor and configure a FEP System over the ServiceBus.
+
+The current Service Bus within FEP 2.5 is 
+\li the FEP 2 way to communicate via (deprecated) @ref fep::AutomationInterface
+\li the FEP 3 way to communicate via @ref fep_rpc
+
+
+The @ref fep::System class is a collection of @ref fep::ParticipantProxy. 
+
+Currently a participant is only identified by its name. As long as participants take part in the same Service Bus Transmission Layer
+(in case of standard DDS it is the domain id of the DDS network connection) a @ref fep::ParticipantProxy will provide a remote access
+to the given interface which may be reached via fep::ParticipantProxy::getRPCComponentProxy.
+
+
+\dot
+digraph fep_sdk_main_structure {
+    node [shape=record, fontname="Arial" style=filled, color="#AFAFAF"];
+    rankdir=LR;
+
+    fep_system_class [label="<sys> fep::System", URL="\ref fep::System"];        
+    fep_participant_proxy_class [label="fep::ParticipantProxy", URL="\ref fep::ParticipantProxy"];
+
+    fep_rpc_participant_info [label="fep::rpc::IRPCParticipantInfo", URL="\ref fep::rpc::IRPCParticipantInfo"];
+    fep_rpc_data_registry [label="fep::rpc::IRPCDataRegistry", URL="\ref fep::rpc::IRPCDataRegistry"];
+    fep_rpc_state_machine [label="fep::rpc::IRPCStateMachine", URL="\ref fep::rpc::IRPCStateMachine"];
+    fep_rpc_configuration [label="fep::rpc::IRPCConfiguration", URL="\ref fep::rpc::IRPCConfiguration"];
+        
+    fep_participant_proxy_class -> fep_rpc_participant_info;
+    fep_participant_proxy_class -> fep_rpc_data_registry;
+    fep_participant_proxy_class -> fep_rpc_state_machine;
+    fep_participant_proxy_class -> fep_rpc_configuration
+
+    fep_system_class -> fep_participant_proxy_class
+    
+}
+\enddot
+
+
+FEP System Library Example
+---------------------------------------------------------------------------------------------------
+
+\li \subpage page_fep_demo_fep_system_control  
+
+*/ 

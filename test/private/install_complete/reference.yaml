@@ -1,0 +1,176 @@
+common:
+    files:
+        - fep_system-config.cmake
+        - fep_system-config-version.cmake
+        - fep_system-macros.cmake
+        - README.md
+        - doc/license/licenses.txt
+        - doc/license/rti_ndds_license.txt
+        - doc/license/used_licenses/a_util/MPL2.0.txt
+        - doc/license/used_licenses/a_util/licenses.txt
+        - doc/license/used_licenses/a_util/used_oss.md
+        - doc/license/used_licenses/ddl/MPL2.0.txt
+        - doc/license/used_licenses/ddl/mpl.md
+        - doc/license/used_licenses/ddl/used_licenses.md
+        - doc/license/used_licenses/ddl/used_licenses/a_util/MPL2.0.txt
+        - doc/license/used_licenses/ddl/used_licenses/a_util/licenses.txt
+        - doc/license/used_licenses/ddl/used_licenses/a_util/used_oss.md
+        - doc/license/used_licenses/ddl/used_licenses/list_used_licenses.md
+        - doc/license/used_licenses/fep_sdk_participant/licenses.txt
+        - doc/license/used_licenses/fep_sdk_participant/rti_ndds_license.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/a_util/MPL2.0.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/a_util/licenses.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/a_util/used_oss.md
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/ddl/MPL2.0.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/ddl/mpl.md
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/ddl/used_licenses.md
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/ddl/used_licenses/a_util/MPL2.0.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/ddl/used_licenses/a_util/licenses.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/ddl/used_licenses/a_util/used_oss.md
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/ddl/used_licenses/list_used_licenses.md
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/fep_tooling_base/used_licenses.md
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/fep_tooling_base/MPL2.0.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/fep_tooling_base/mpl.md
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/pkg_rpc/MPL2.0.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/pkg_rpc/licenses.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/pkg_rpc/used_licenses/a_util/MPL2.0.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/pkg_rpc/used_licenses/a_util/licenses.txt
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/pkg_rpc/used_licenses/a_util/used_oss.md
+        - doc/license/used_licenses/fep_sdk_participant/used_licenses/pkg_rpc/used_licenses/list_used_licenses.md
+        - include/fep_system/fep_system_version.h
+        - include/fep_system/fep_system.h
+        - include/fep_system/fep_system_export.h
+        - include/fep_system/fep_system_types.h
+        - include/fep_system/rpc_component_proxy.h
+        - include/fep_system/participant_proxy.h
+        - include/fep_system/system_logger_intf.h
+        - include/fep_system/base/logging/logging_levels.h
+        - include/fep_system/base/properties/properties.h
+        - include/fep_system/base/properties/properties_intf.h
+        - include/fep_system/base/properties/property_type.h
+        - include/fep_system/base/properties/property_type_conversion.h
+        - include/fep_system/base/states/fep2_state.h
+        - include/fep_system/base/streamtype/default_streamtype.h
+        - include/fep_system/base/streamtype/streamtype.h
+        - include/fep_system/base/streamtype/streamtype_intf.h
+        - include/fep_system/rpc_components/configuration/configuration_rpc_intf.h
+        - include/fep_system/rpc_components/configuration/configuration_rpc_intf_def.h
+        - include/fep_system/rpc_components/data_registry/data_registry_rpc_intf.h
+        - include/fep_system/rpc_components/data_registry/data_registry_rpc_intf_def.h
+        - include/fep_system/rpc_components/legacy/state_machine/state_machine_rpc_intf.h
+        - include/fep_system/rpc_components/legacy/state_machine/state_machine_rpc_intf_def.h
+        - include/fep_system/rpc_components/participant_info/participant_info_rpc_intf.h
+        - include/fep_system/rpc_components/participant_info/participant_info_rpc_intf_def.h
+        - include/fep_system/rpc_components/rpc/fep_rpc_client.h
+        - include/fep_system/rpc_components/rpc/fep_rpc_definition.h
+        - include/fep_system/rpc_components/rpc/fep_rpc_object_client_intf.h
+        - examples/CMakeLists.txt
+        - examples/conanfile.txt
+        - examples/src/CMakeLists.txt
+        - examples/src/demo_fep_system_control/CMakeLists.txt
+        - examples/src/demo_fep_system_control/README.txt
+        - examples/src/demo_fep_system_control/main.cpp
+        - lib/cmake/fep_system_targets.cmake
+
+linux_shared_debug:
+    conditions:
+        my_conds:
+            os: Linux
+            build_type: Debug
+    files:
+        - lib/libfep_participantd2.6.so
+        - lib/libnddscd.so
+        - lib/libnddscored.so
+        - lib/libnddscppd.so
+        - lib/libfep_systemd2.6.so
+        - lib/cmake/fep_system_targets-debug.cmake
+        - examples/bin/libfep_participantd2.6.so
+        - examples/bin/libnddscd.so
+        - examples/bin/libnddscored.so
+        - examples/bin/libnddscppd.so
+        - examples/bin/libfep_systemd2.6.so
+
+linux_shared_release:
+    conditions:
+        my_conds:
+            os: Linux
+            build_type: Release
+    files:
+        - lib/libfep_participant2.6.so
+        - lib/libnddsc.so
+        - lib/libnddscore.so
+        - lib/libnddscpp.so
+        - lib/libfep_system2.6.so
+        - lib/cmake/fep_system_targets-release.cmake
+        - examples/bin/libfep_participant2.6.so
+        - examples/bin/libnddsc.so
+        - examples/bin/libnddscore.so
+        - examples/bin/libnddscpp.so
+        - examples/bin/libfep_system2.6.so
+
+linux:
+    conditions:
+        my_conds:
+            os: Linux
+    files:
+        - examples/build_examples.sh
+        - examples/bin/demo_fep_system_control
+
+windows_shared_debug:
+    conditions:
+        my_conds:
+            os: Windows
+            build_type: Debug
+    files:
+        - lib/fep_participantd2.6.dll
+        - lib/nddscd.dll
+        - lib/nddscored.dll
+        - lib/nddscppd.dll
+        - lib/fep_systemd2.6.dll
+        - lib/fep_systemd2.6.lib
+        - lib/cmake/fep_system_targets-debug.cmake
+        - examples/bin/fep_participantd2.6.dll
+        - examples/bin/nddscd.dll
+        - examples/bin/nddscored.dll
+        - examples/bin/nddscppd.dll
+        - examples/bin/fep_systemd2.6.dll
+
+windows_shared_release:
+    conditions:
+        my_conds:
+            os: Windows
+            build_type: Release
+
+    files:
+        - lib/fep_participant2.6.dll
+        - lib/nddsc.dll
+        - lib/nddscore.dll
+        - lib/nddscpp.dll
+        - lib/fep_system2.6.dll
+        - lib/fep_system2.6.lib
+        - lib/cmake/fep_system_targets-release.cmake
+        - examples/bin/fep_participant2.6.dll
+        - examples/bin/nddsc.dll
+        - examples/bin/nddscore.dll
+        - examples/bin/nddscpp.dll
+        - examples/bin/fep_system2.6.dll
+
+windows:
+    conditions:
+        my_conds:
+            os: Windows
+    files:
+        - examples/build_examples.cmd
+        - examples/bin/demo_fep_system_control.exe
+
+documentation:
+    conditions:
+        doc_x86:
+            arch: x86
+        doc_x86_64:
+            arch: x86_64
+    files:
+        - doc/changelog.md
+        - doc/fep-system.html
+        - doc/doxygen/input/fep_system_library.dox
+        - doc/html/*

@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------------------------------
+FEP SDK (FEP Library, FEP Documentation, FEP Data Model and all other parts)
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FEP SDK Special User Agreement (Concerning NDDS License)
+----------------------------------------------------------------------------------------------------
+see rti_ndds_license.txt next to this file
+----------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------------
+DDL
+----------------------------------------------------------------------------------------------------
+see ddl_adpl.txt and ddl_used_licenses.txt next to this file
+----------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------------
+A_Util
+----------------------------------------------------------------------------------------------------
+see ddl_adpl.txt next to this file and the following list:
+- [Clara 1.1.2](https://github.com/catchorg/Clara/tree/v1.1.2) ([License](3rdparty/clara/Clara-1.1.2/LICENSE.txt))
+- [current_function of Boost 1.64.0](http://www.boost.org/doc/libs/1_64_0/boost/current_function.hpp) ([License](3rdparty/boost/boost_1_64_0/boost/current_function.hpp))
+- [PCRE 8.39](https://sourceforge.net/projects/pcre/files/pcre/8.39/) ([License](3rdparty/pcre/pcre-8.39/LICENCE))
+- [pstdint 0.1.16.0](http://www.azillionmonkeys.com/qed/pstdint.h) ([License](3rdparty/pstdint/pstdint-0.1.16.0/pstdint.h) )
+- [pugixml 1.8](https://github.com/zeux/pugixml/tree/v1.8) ([License](3rdparty/pugixml/pugixml-1.8/readme.txt))
+- [TinyThread++ 1.1](http://tinythreadpp.bitsnbites.eu/) ([License](3rdparty/tinythread/TinyThread++-1.1/README.txt))
+- [uuid 1.6.2](http://www.ossp.org/pkg/lib/uuid/) ([License](3rdparty/uuid/uuid-1.6.2/license.txt))
+----------------------------------------------------------------------------------------------------

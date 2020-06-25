@@ -1,0 +1,119 @@
+#
+# Copyright @ 2019 Audi AG. All rights reserved.
+# 
+#     This Source Code Form is subject to the terms of the Mozilla
+#     Public License, v. 2.0. If a copy of the MPL was not distributed
+#     with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+# 
+# If it is not possible or desirable to put the notice in a particular file, then
+# You may include the notice in a location (such as a LICENSE file in a
+# relevant directory) where a recipient would be likely to look for such a notice.
+# 
+# You may add additional accurate notices of copyright ownership.
+#
+##generate the doxyfile to stdout
+execute_process(COMMAND @DOXYGEN_EXECUTABLE@ -s -g - OUTPUT_VARIABLE doxygen_out)
+
+##set any doxygen tag according to our needs, leave the rest untouched (= default)
+# never use the absolute path for INPUT, otherwise call graphs might be generated with absolute
+# paths inside. Use relative path and execute doxygen from within install dir WORKING_DIRECTORY
+# We could just use @CMAKE_CURRENT_SOURCE_DIR@/input to include all *.md files, but this way we can specify their order for the index
+string(REGEX REPLACE "(INPUT +[=])"
+                     "\\1 @PROJECT_SOURCE_DIR@/doc/extern/changelog.md \\\\\n\
+                         @PROJECT_SOURCE_DIR@/doc/input \\\\\n\
+                         @PROJECT_SOURCE_DIR@/include \\\\\n\
+                         @PROJECT_SOURCE_DIR@/include/fep_system \\\\\n\
+                         @PROJECT_SOURCE_DIR@/include/fep_system/rpc_components/configuration \\\\\n\
+                         @PROJECT_SOURCE_DIR@/include/fep_system/rpc_components/data_registry \\\\\n\
+                         @PROJECT_SOURCE_DIR@/include/fep_system/rpc_components/legacy/state_machine \\\\\n\
+                         @PROJECT_SOURCE_DIR@/include/fep_system/rpc_components/participant_info \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/base/logging \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/base/properties \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/base/states \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/base/streamtype \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/rpc_components/configuration \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/rpc_components/data_registry \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/rpc_components/legacy/state_machine \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/rpc_components/participant_info \\\\\n\
+                         @PARTICIPANT_LIB_DIR@/include/fep3/rpc_components/rpc \\\\\n\
+                         @INPUT_INTERNAL@ @PROJECT_SOURCE_DIR@/examples/src"
+                     doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(PROJECT_NAME +[=]) \"My Project\""
+                     "\\1 \"FEP System Library\"" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(PROJECT_BRIEF +[=])"
+                     "\\1 \"@AEV_PRODUCT_FULL_NAME@\"" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(PROJECT_NUMBER +[=])"
+                     "\\1 \"v@FEP_SYSTEM_LIB_VERSION@ - @VERSION_SYSTEM_LIBRARY@ @BETA_FLAG@\""
+                     doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(RECURSIVE +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(JAVADOC_AUTOBRIEF +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(TYPEDEF_HIDES_STRUCT +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(EXTRACT_STATIC +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(EXTRACT_LOCAL_METHODS +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(HIDE_IN_BODY_DOCS +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(HIDE_SCOPE_NAMES +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(WARN_NO_PARAMDOC +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(EXTRACT_PRIVATE +[=]) NO"
+                     "\\1 @EXTRACT_PRIVATE@" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(INTERNAL_DOCS +[=]) NO"
+                     "\\1 @INTERNAL_DOCS@" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(OUTPUT_DIRECTORY +[=])"
+                     "\\1 @CMAKE_INSTALL_PREFIX@/doc" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(EXCLUDE_PATTERNS +[=])"
+                     "\\1 */stdafx.h\\\\\n\
+                         */stdafx.cpp\\\\\n\
+                         */examples/src/*/*.cpp\\\\\n\
+                         */examples/src/*/*.h\\\\\n\
+                         */include/http/*.h"
+                     doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(GENERATE_LATEX +[=]) YES"
+                     "\\1 NO" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(COLLABORATION_GRAPH +[=]) YES"
+                     "\\1 NO" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(SHOW_INCLUDE_FILES +[=]) YES"
+                     "\\1 NO" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(GENERATE_TESTLIST +[=]) YES"
+                     "\\1 NO" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(GENERATE_BUGLIST +[=]) YES"
+                     "\\1 NO" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(SHOW_USED_FILES +[=]) YES"
+                     "\\1 NO" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(FULL_PATH_NAMES +[=]) YES"
+                     "\\1 NO" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(HAVE_DOT +[=]) NO"
+                     "\\1 @DOXYGEN_DOT_FOUND@" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(DOT_PATH +[=])"
+                     "\\1 @DOXYGEN_DOT_EXECUTABLE@" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(EXAMPLE_PATH +[=])"
+                     "\\1 @PROJECT_SOURCE_DIR@/examples/src @PROJECT_SOURCE_DIR@/include"
+                     doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(EXAMPLE_RECURSIVE +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(DOT_MULTITARGETS +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(EXAMPLE_PATTERNS +[=]) \\*"
+                     "\\1 *.cpp *.h *.txt *.description" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(FILE_PATTERNS +[=]).*(\\*\\.qsf)"
+                     "\\1 *.dox *.txt *.md *.h *.json" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(GENERATE_TAGFILE +[=])"
+                     "\\1 @CMAKE_INSTALL_PREFIX@/doc/html/@PROJECT_NAME@.tag" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(GENERATE_TREEVIEW +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(MACRO_EXPANSION +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+string(REGEX REPLACE "(EXPAND_ONLY_PREDEF +[=]) NO"
+                     "\\1 YES" doxygen_out ${doxygen_out})
+
+##generate the documentation with doxygen
+file(WRITE @CMAKE_CURRENT_BINARY_DIR@/Doxyfile ${doxygen_out})
+execute_process(COMMAND @DOXYGEN_EXECUTABLE@ @CMAKE_CURRENT_BINARY_DIR@/Doxyfile
+                WORKING_DIRECTORY @CMAKE_INSTALL_PREFIX@)
+
