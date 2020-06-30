@@ -22,7 +22,7 @@ fep_add_gtest(
     fep_test_common.h)
 set_target_properties(tester_system_library PROPERTIES FOLDER test/fep_system)
 # fep_core link is needed because of helper library
-target_link_libraries(tester_system_library PRIVATE fep_system fep_participant)
+target_link_libraries(tester_system_library PRIVATE fep_system fep_participant GTest::Main)
 
 fep_deploy_libraries(tester_system_library)
 # copy library for integrated tests
@@ -45,7 +45,7 @@ fep_add_gtest(
 )
 set_target_properties(tester_system_discovery PROPERTIES FOLDER test/fep_system)
 # fep_core link is needed because of helper library
-target_link_libraries(tester_system_discovery PRIVATE fep_system fep_participant)
+target_link_libraries(tester_system_discovery PRIVATE fep_system fep_participant GTest::Main)
 
 fep_deploy_libraries(tester_system_discovery)
 # copy library for integrated tests
@@ -70,7 +70,7 @@ fep_add_gtest(
 )
 set_target_properties(tester_system_library_participant PROPERTIES FOLDER test/fep_system)
 # fep_core link is needed because of helper library
-target_link_libraries(tester_system_library_participant PRIVATE fep_system fep_participant)
+target_link_libraries(tester_system_library_participant PRIVATE fep_system fep_participant GTest::Main)
 
 fep_deploy_libraries(tester_system_library_participant)
 # copy library for integrated tests
